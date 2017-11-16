@@ -29,6 +29,16 @@
 	  gtag('js', new Date());
 	
 	  gtag('config', 'UA-109785549-1');
+	  
+	  function clickBotao() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'button',
+              eventAction: 'click',
+              eventLabel: 'Quero Conhecer'
+            });
+
+        } 
 	</script>
 
   </head>
@@ -49,7 +59,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">Sobre a app</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact" onClick="ga('send', 'event', 'outbound', 'click', 'https://feedidea.mybluemix.net');">Eu quero!</a>
+              <a class="nav-link js-scroll-trigger" href="#contact" onClick="clickBotao();">Eu quero!</a>
             </li>
           </ul>
         </div>
